@@ -6,7 +6,8 @@ class Program
 {
     static void Main()
     {
-        string inputData = "Dados de exemplo";
+        Console.WriteLine("Digite uma string para aplicar o hashing SHA256");
+        string inputData = Console.ReadLine();
         using (SHA256 sha256 = SHA256.Create())
         {
             byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(inputData));
